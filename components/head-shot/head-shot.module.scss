@@ -1,0 +1,41 @@
+@import "../../styles/abstracts/sass-variables";
+
+/***********************************************************/
+.headshotLg {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 14rem;
+  width: 14rem;
+  background-size: cover;
+  z-index: 50;
+  top: 1.4rem;
+  right: 4rem;
+
+  @media only screen and (max-width: $bp-lg) {
+    display: none;
+  }
+}
+
+/***********************************************************/
+.headshotSmol {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 19rem;
+  width: 19rem;
+  background-size: cover;
+  z-index: 50;
+  margin: 0rem 0 1.5rem 0;
+
+  @media only screen and (min-width: $bp-lg) {
+    display: none;
+  }
+}
+
+/***********************************************************/
+.img {
+  background-image: url(../../public/images/jam-face.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}

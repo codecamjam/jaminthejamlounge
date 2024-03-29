@@ -1,0 +1,7 @@
+@import "../../styles/abstracts/sass-variables";
+
+.stars {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-0.5rem);
+}

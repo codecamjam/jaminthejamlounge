@@ -1,0 +1,156 @@
+@import "../../styles/abstracts/sass-variables";
+
+/*****************************************************************/
+.card {
+  overflow: hidden;
+  margin: 0.3rem 0rem;
+  position: relative;
+  padding: 0.5rem 1.5rem 0.8rem;
+  border: 1px solid var(--text);
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $bp-md) {
+    max-width: 45rem;
+    margin: 1.2rem auto;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    max-width: 30rem;
+    margin: 1rem 1.5rem;
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    margin: 1rem 1.5rem;
+  }
+
+  @media only screen and (min-width: 103.12375em) {
+    margin: 1rem auto 1rem auto;
+    // box-shadow: 2.5rem 2.3rem 1rem rgba(0, 0, 0, 0.4);
+  }
+
+  @media only screen and (min-width: 110em) {
+    max-width: 33rem;
+  }
+
+  svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: default;
+    transform: translate(0.2rem, 0.2rem);
+  }
+}
+
+/*****************************************************************/
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/*****************************************************************/
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin: 0.5rem 0 1rem;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $bp-xs) {
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+/*****************************************************************/
+.list {
+  list-style: none;
+  padding-left: 0rem;
+  display: flex;
+  flex-direction: column;
+
+  &Item {
+    // text-transform: Capitalize;
+    padding: 0.5rem 0;
+    font-style: italic;
+
+    font-weight: bold;
+
+    letter-spacing: 0.1rem;
+    font-size: 1.35rem;
+
+    @media only screen and (max-width: $bp-xs) {
+      font-size: 1.3rem;
+      padding: 0.1rem 0;
+      letter-spacing: 0.1rem;
+    }
+
+    @media only screen and (min-width: $bp-sm) {
+      white-space: nowrap;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      padding-left: 4rem;
+    }
+
+    @media only screen and (min-width: $bp-xl) {
+      padding-left: 0;
+    }
+
+    &::before {
+      content: "-";
+      letter-spacing: 0.6rem;
+    }
+  }
+}
+
+/*****************************************************************/
+.instrument {
+  position: relative;
+  transform: translateY(-0.2rem);
+}
+
+/*****************************************************************/
+.body {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $bp-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    flex-direction: column;
+  }
+}
+
+/*****************************************************************/
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+/*****************************************************************/
+.quote {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--text);
+  text-align: center;
+  font-weight: bold;
+
+  @media only screen and (min-width: $bp-sm) {
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    font-size: 1.1rem;
+    transform: translateX(-0.1rem);
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/abstracts/sass-variables";
+
+/**********************************************************************/
+.instrument {
+  display: flex;
+  justify-content: center;
+  transform: rotateY(180deg);
+  svg {
+    width: 16rem;
+    height: 16rem;
+
+    @media only screen and (min-width: $bp-md) {
+      width: 18rem;
+      height: 18rem;
+    }
+  }
+}

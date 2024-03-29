@@ -1,0 +1,145 @@
+@import "../../styles/abstracts/sass-variables";
+
+/********************************************/
+.support {
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    white-space: nowrap;
+    transform: translate(-2px, -0.2rem);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+
+    @media only screen and (min-width: $bp-xs) {
+      font-size: 2.8rem;
+    }
+
+    @media only screen and (min-width: $bp-sm) {
+      white-space: wrap;
+      font-size: 3.2rem;
+    }
+
+    @media only screen and (min-width: $bp-md) {
+      white-space: wrap;
+      font-size: 4rem;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      white-space: wrap;
+      font-size: 6rem;
+      transform: translate(0, -0.2rem);
+    }
+  }
+
+  h2,
+  h3 {
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  svg {
+    width: 15rem;
+    height: 15rem;
+
+    @media only screen and (min-width: $bp-sm) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 2.5rem;
+    font-weight: normal;
+
+    svg {
+      display: block;
+      margin: auto;
+    }
+
+    span {
+      margin-top: 0.2rem;
+      display: block;
+      color: #3d95ce;
+    }
+  }
+}
+
+/********************************************/
+.payer {
+  font-size: 2.5rem !important;
+  font-weight: bold;
+  margin-bottom: 0rem;
+  font-style: oblique;
+}
+
+/********************************************/
+.tape {
+  svg {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+/********************************************/
+.tips {
+  text-decoration: none !important;
+  text-align: center;
+  color: #00c244;
+  font-size: 2.3rem;
+  font-weight: bold;
+
+  @media only screen and (min-width: $bp-sm) {
+    font-size: 3.2rem;
+    margin: 0;
+  }
+}
+
+/********************************************/
+.heart {
+  margin: 0 0.8rem 0 0.8rem;
+  transform: translate(0, -0.3rem);
+  svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: #ff5733;
+  }
+
+  &--1 {
+  }
+
+  &--2 {
+  }
+}
+
+.venmo {
+  svg {
+    width: 17rem;
+    height: 17rem;
+    transform: translateY(0rem);
+
+    @media only screen and (min-width: $bp-sm) {
+      width: 11.7rem;
+      height: 11.7rem;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      transform: translateY(-0.8rem);
+    }
+  }
+}
+
+.instructions {
+  padding: 0;
+  text-align: center;
+  font-size: var(--font-sm) !important;
+}

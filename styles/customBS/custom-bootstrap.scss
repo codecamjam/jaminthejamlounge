@@ -1,0 +1,22 @@
+$theme-colors: (
+  primary: #004290,
+  secondary: #99b6ce,
+  success: #27b472,
+  info: #2191d0,
+  warning: #eae5d2,
+  danger: #e25252,
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "custom-nav";
+
+$body-font-family: "Franklin Gothic Medium" !important;
+
+.card {
+  background-color: var(--background);
+  color: var(--text) !important;
+  border: 1px solid var(--text) !important;
+  border-radius: 0 !important;
+  // box-shadow: 5px 5px 2px 0.3 !important;
+}

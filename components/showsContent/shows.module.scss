@@ -1,0 +1,80 @@
+@import "../../styles/abstracts/sass-variables";
+
+/*************************************/
+.gears {
+  display: block;
+  // transform: rotateZ(180deg);
+  margin: 0.5rem auto 0.8rem auto;
+}
+
+/*************************************/
+.shows {
+  overflow: hidden;
+  p {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/*************************************/
+.calendars {
+  svg {
+    display: none;
+    width: 1.2rem;
+    height: 1.2rem;
+
+    @media only screen and (min-width: $bp-xs) {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    @media only screen and (min-width: $bp-md) {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+/*************************************/
+.calendar1 {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+}
+
+/*************************************/
+.calendar2 {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+}
+
+/*************************************/
+.calendar3 {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 0.7rem;
+}
+
+/*************************************/
+.calendar4 {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0.7rem;
+}
+
+/*********************************************/
+.heading {
+  font-weight: 400;
+  font-size: 2rem !important;
+  text-transform: uppercase;
+  color: var(--text);
+  text-align: center;
+  margin-top: 1rem;
+  text-decoration: underline;
+}

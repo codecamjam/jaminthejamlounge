@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.jam {
+  display: block;
+  margin-left: 4.3rem;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  line-height: 4.5rem;
+  color: var(--text);
+  font-weight: bold;
+}

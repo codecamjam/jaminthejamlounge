@@ -1,0 +1,23 @@
+@import "../../styles/abstracts/sass-variables";
+
+.jam {
+  display: none;
+  text-align: center;
+  margin: 3rem 0 3rem 0;
+  font-size: 7rem;
+  z-index: 1;
+  line-height: 3rem;
+
+  @media only screen and (min-height: $bp-sm) {
+    display: block;
+  }
+
+  @media only screen and (min-width: $bp-sm) {
+    font-size: 8rem;
+    // margin-top: 0rem;
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    font-size: 9rem;
+  }
+}

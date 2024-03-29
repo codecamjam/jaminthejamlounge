@@ -1,0 +1,111 @@
+@import "customBS/custom-bootstrap";
+@import "abstracts/css-variables";
+@import "abstracts/sass-variables";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  // font-weight: bold;
+  line-height: 1.7;
+  // font-family: "Cutive Mono", monospace;
+  font-family: "Lato", sans-serif;
+
+  @media only screen and (min-width: 120em) {
+    font-size: 1.14rem;
+  }
+
+  @media only screen and (min-width: 140em) {
+    font-size: 1.2rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.resize-animation-stopper * {
+  transition: none !important;
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  width: 100vw;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-template-rows: min-content minmax(min-content, 1fr);
+  align-content: space-between;
+}
+
+.font-cutive-mono {
+  font-family: "Cutive Mono", monospace;
+}
+
+.font-zilla-slab-highlight {
+  font-family: "Zilla Slab Highlight", serif;
+}
+
+.card {
+  box-shadow: none;
+  border: 1px solid var(--text);
+
+  color: var(--text);
+}
+
+.btn-black-and-white {
+  border-radius: 0 !important;
+  color: var(--text); /* Text color */
+  background-color: var(--background); /* Background color */
+  border-color: var(--text); /* Text color */ /* Border color */
+  transition: all 0.2s ease-in;
+  outline-color: var(--text) !important;
+
+  &:hover {
+    color: var(--background); /* Text color on hover */
+    background-color: var(--text); /* Background color on hover */
+    border-color: var(--text); /* Border color on hover */
+  }
+
+  &:focus {
+    outline-color: var(--text) !important;
+  }
+}
+
+.btn-link:focus {
+  outline: var(--text) !important/* Your desired color here */;
+  /* You can also customize other focus styles, e.g., outline-style, outline-width, etc. */
+}
+
+a {
+  &:focus {
+    outline: none !important;
+    outline-color: transparent !important;
+  }
+}
+
+/* Changing the background color of the selection to blue with white text color */
+::selection {
+  background: var(--text);
+  color: var(--background);
+}
+
+/* For cross-browser compatibility */
+::-moz-selection {
+  background: var(--text);
+  color: var(--background);
+}

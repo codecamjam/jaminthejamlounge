@@ -1,13 +1,18 @@
-/**
- * @type {import('next').NextConfig}
- */
+const path = require("path");
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  distDir: "dist",
-  images: {
-    unoptimized: true,
+  reactStrictMode: true,
+  webpack(config) {
+    config.resolve.alias["@"] = path.resolve.apply(__dirname);
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
   },
+  // basePath: '/jam-waves',
+  // assetPrefix: '/jam-waves',
 };
 
 module.exports = nextConfig;

@@ -1,0 +1,14 @@
+@import "../../styles/abstracts/sass-variables";
+
+.hero {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: var(--text);
+  word-spacing: 0rem;
+  text-align: center;
+  transform: translateY(0.3rem);
+
+  @media only screen and (min-width: $bp-md) {
+    font-size: 6rem;
+  }
+}

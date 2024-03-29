@@ -1,0 +1,109 @@
+@import "../../styles/abstracts/sass-variables";
+
+/***********************************************************/
+.footer {
+  background-color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  position: relative;
+
+  @media only screen and (min-width: $bp-sm) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    display: flex;
+    align-items: stretch;
+
+    &:hover svg,
+    &:focus svg {
+      fill: var(--background);
+      transform: translate(0.1rem, -0.2rem);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    fill: var(--background);
+    transition: all ease-in 0.2s;
+
+    @media only screen and (min-width: $bp-sm) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    @media only screen and (min-width: $bp-md) {
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+  }
+}
+
+/***********************************************************/
+.copyright {
+  color: var(--background);
+  line-height: 0;
+  position: relative;
+  z-index: 2;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  transform: translate(0rem, 0.2rem);
+
+  @media only screen and (min-width: $bp-sm) {
+    margin-top: 0.5rem;
+    font-size: var(--font-reg);
+    transform: translate(0.7rem, 0.3rem);
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0.3rem);
+  }
+}
+
+.jam {
+  display: none;
+  @media only screen and (min-width: $bp-xl) {
+    display: block;
+    color: var(--background);
+    line-height: 0;
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+    transform: translate(0.5rem, 0);
+    font-size: 2.5rem;
+  }
+}
+
+/***********************************************************/
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+  width: 18rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    transform: translate(-1rem, -0.2rem);
+    width: 16rem;
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    transform: translate(-1rem, -0.2rem);
+    width: 20rem;
+  }
+}

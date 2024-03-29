@@ -1,0 +1,66 @@
+@import "../../styles/abstracts/sass-variables";
+
+/***************************************************************/
+.btn {
+  &,
+  &:link,
+  &:visited {
+    color: var(--background);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: var(--font-sm);
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 0rem;
+    transition: all 0.2s;
+    position: relative;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+
+    @media only screen and (min-width: $bp-md) {
+      padding: 1.2rem 3rem;
+      font-size: var(--font-reg);
+    }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem var(--text);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem var(--text);
+  }
+
+  &--hero {
+    background-color: var(--text);
+    color: var(--text);
+    letter-spacing: 0.1rem;
+
+    &::after {
+      background-color: var(--text);
+    }
+  }
+
+  &::after {
+    content: ""; /*required */
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 0rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
