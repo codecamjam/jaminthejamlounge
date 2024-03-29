@@ -21,37 +21,12 @@ export default function AboutInfo() {
           {`Experience deep relaxation
           through dynamic and spontaneous jams in the Jam Lounge. Truely, every jam I make is an improvised arrangement of sound, rhythm, and melody, brought to life before your ears. And it's all live and made in real time! Come check out my show soon. I bet you'll dig it! I'm looking forward to playing for you!`}
         </p>
-        {/* <h3>The Website</h3>
-        <p>
-          {`This website was built from the ground up using Next.js, a powerful
-          React framework. While it's currently a static site, I have big plans
-          for its future:`}
+        <p className={`${css.thanks} fw-bold m-0`}>
+          Thanks for stopping by and hanging in the Jam Lounge!
         </p>
-        <ul>
-          <li>
-            {`I'll be upgrading to the latest version of Next.js to leverage its
-            advanced features.`}
-          </li>
-          <li>
-            {`I'll be incorporating TypeScript for enhanced code quality and
-            maintainability.`}
-          </li>
-          <li>
-            {`I'm working on connecting the site to my personal backend services,
-            enhancing the user experience and offering more interactive
-            features.`}
-          </li>
-        </ul>
-        <p>
-          {`In the meantime, enjoy the current version of the site—it's a snapshot
-          of my creative journey. Your visit means a lot to me, and your support
-          fuels my passion for creating live looping music.`}
-        </p> */}
-        <p className={css.thanks}>
-          {`Thanks for stopping by and hanging in the Jam Lounge!`}
-          <br />
-          <p className={css.jam}>-- <span>JAM</span></p>
-        </p>
+       <span>-- <span>JAM</span></span>
+            
+        
       </Card>
     </Container>
   );

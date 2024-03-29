@@ -22,7 +22,7 @@ export default function HomePage() {
       />
       <LandingWords position="bottom" />
       <div className="my-4 mx-auto">
-        <MediaLinks landing />
+        <MediaLinks />
       </div>
       <AboutContent />
       <ContactContent />

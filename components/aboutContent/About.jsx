@@ -1,5 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { AboutInfo, AboutCard as Card, Instrument } from "@/components";
+import AboutInfo from '../aboutInfo'
+import AboutCard from '../aboutCard'
+import  Instrument from '../instrument'
 import css from "./about.module.scss";
 
 const sizes = { xs: 12, lg: 6, xl: 4 };
@@ -17,7 +19,7 @@ export default function About() {
               className="my-2 mx-0 p-0"
             >
               <section>
-                <Card
+                <AboutCard
                   title="100%"
                   icon="icon-tv"
                   list={[
@@ -29,12 +31,12 @@ export default function About() {
                   text="Live Looping Jams"
                 >
                   <Instrument instrument="icon-guitar" />
-                </Card>
+                </AboutCard>
               </section>
             </Col>
             <Col {...sizes} className="my-2 mx-0 p-0">
               <section>
-                <Card
+                <AboutCard
                   title="Live"
                   icon="icon-headphones"
                   list={[
@@ -46,12 +48,12 @@ export default function About() {
                   text="Music To Help You Relax"
                 >
                   <Instrument instrument="icon-bongos" />
-                </Card>
+                </AboutCard>
               </section>
             </Col>
             <Col {...sizes} className="my-2 mx-0 p-0 mx-lg-auto mx-xl-0">
               <section>
-                <Card
+                <AboutCard
                   title="Looping"
                   icon="icon-equalizer2"
                   list={[
@@ -63,7 +65,7 @@ export default function About() {
                   text="JAM Plays It All"
                 >
                   <Instrument instrument="icon-keys" />
-                </Card>
+                </AboutCard>
               </section>
             </Col>
             <Col
@@ -73,7 +75,7 @@ export default function About() {
               className="my-2 mx-0 p-0"
             >
               <section>
-                <Card
+                <AboutCard
                   title="Playing"
                   icon="icon-music"
                   list={[
@@ -85,12 +87,12 @@ export default function About() {
                   text="Really Chill Vibes"
                 >
                   <Instrument instrument="icon-vibes" />
-                </Card>
+                </AboutCard>
               </section>
             </Col>
             <Col {...sizes} className="my-2 mx-0 p-0">
               <section>
-                <Card
+                <AboutCard
                   title="Trippy"
                   icon="icon-video-camera"
                   list={[
@@ -102,12 +104,12 @@ export default function About() {
                   text="For Melting Into The Couch"
                 >
                   <Instrument instrument="icon-drums" />
-                </Card>
+                </AboutCard>
               </section>
             </Col>
             <Col {...sizes} className="my-2 mx-0 p-0 mx-lg-auto mx-xl-0">
               <section>
-                <Card
+                <AboutCard
                   title="Sounds"
                   icon="icon-mic"
                   list={[
@@ -119,7 +121,7 @@ export default function About() {
                   text="90's Hippie Weather Channel"
                 >
                   <Instrument instrument="icon-synth" />
-                </Card>
+                </AboutCard>
               </section>
             </Col>
           </Row>
