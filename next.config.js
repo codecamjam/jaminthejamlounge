@@ -1,8 +1,5 @@
 const path = require("path");
 
-const appPath =
-  process.env.NODE_ENV === "production" ? "/jaminthejamlounge" : undefined;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -14,8 +11,8 @@ const nextConfig = {
     });
     return config;
   },
-  basePath: appPath,
-  assetPrefix: appPath,
+  // basePath: '/jam-waves',
+  // assetPrefix: '/jam-waves',
 };
 
 module.exports = nextConfig;

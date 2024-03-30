@@ -4,7 +4,7 @@ import css from './icon.module.scss';
 export default function Icon({ spriteName, variant }) {
   const customStyle = getCustomStyle(spriteName);
 
-  let spritePath = `/images/sprite.svg#${spriteName}`;
+  let spritePath = `${process.env.NEXT_PUBLIC_ICONS}/sprite.svg#${spriteName}`;
 
   return (
     <svg
