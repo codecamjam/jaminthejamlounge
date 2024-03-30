@@ -11,6 +11,8 @@ const nextConfig = {
     });
     return config;
   },
+  basePath: "/jaminthejamlounge",
+  assetPrefix: "/jaminthejamlounge",
 };
 
 module.exports = nextConfig;
