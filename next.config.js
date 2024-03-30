@@ -1,7 +1,7 @@
 const path = require("path");
 
 const appPath =
-  process.env.NODE_ENV === "production" ? "/jaminthejamlounge" : undefined;
+  process.env.NODE_ENV === "production" ? "/jaminthejamlounge" : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

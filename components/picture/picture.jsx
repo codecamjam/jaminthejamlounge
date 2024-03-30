@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { useAppContext } from "@/context";
+import {publicPath} from '@/constants'
 import css from "./picture.module.scss";
 
 export default function Picture({ img, alt, invert }) {
   const { darkMode } = useAppContext();
 
-  const imgSrc = `/images/${img}`;
+  const imgSrc = `${publicPath}/images/${img}`;
 
   const imgStyle = {
     maxWidth: invert ? "100%" : "70%", // Set maximum width to 100% of container

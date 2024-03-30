@@ -1,10 +1,11 @@
 import { getCustomStyle } from './utils';
+import { publicPath } from "@/constants";
 import css from './icon.module.scss';
 
 export default function Icon({ spriteName, variant }) {
   const customStyle = getCustomStyle(spriteName);
 
-  let spritePath = `/images/sprite.svg#${spriteName}`;
+  let spritePath = `${publicPath}/images/sprite.svg#${spriteName}`;
 
   return (
     <svg
