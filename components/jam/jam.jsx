@@ -12,7 +12,7 @@ export default function TFT() {
       <DarkModeButton />
       <Link classname="ml-5" href={isHomePage ? "/about" : "/"} passHref>
         <Navbar.Brand>
-          <span className={css.jam}>JAM</span>
+          <span className={css.jam}></span>
         </Navbar.Brand>
       </Link>
     </div>

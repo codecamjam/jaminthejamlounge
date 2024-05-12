@@ -13,16 +13,6 @@ class MyDocument extends Document {
             rel="shortcut icon"
             href={`${process.env.NEXT_PUBLIC_FAVICON}/favicon.ico`}
           />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="anonymous"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap"
-            rel="stylesheet"
-          />
         </Head>
         <body>
           <div id="overlays" />
