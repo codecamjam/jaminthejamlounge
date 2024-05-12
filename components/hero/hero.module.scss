@@ -2,13 +2,20 @@
 
 .hero {
   text-transform: uppercase;
-  font-size: 3.5rem;
-  color: var(--text);
+  font-size: 3.3rem;
   word-spacing: 0rem;
   text-align: center;
   transform: translateY(0.3rem);
 
   @media only screen and (min-width: $bp-md) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
     font-size: 6rem;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    font-size: 7rem;
   }
 }

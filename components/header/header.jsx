@@ -31,6 +31,7 @@ export default function Header() {
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav onSelect={handleNavLinkClick}>
+              <NavLink route="/" text="home" icon="icon-home3" />
               <NavLink route="/about" text="about" icon="icon-accessibility" />
               <NavLink
                 route="/contact"
