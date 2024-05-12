@@ -12,7 +12,7 @@ const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [expanded, setExpanded] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const doc = useRef(null);
 
