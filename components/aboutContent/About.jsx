@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { useRouter } from 'next/router';
 import AboutInfo from '../aboutInfo'
 import AboutCard from '../aboutCard'
 import  Instrument from '../instrument'
@@ -7,6 +8,8 @@ import css from "./about.module.scss";
 const sizes = { xs: 12, lg: 6, xl: 4 };
 
 export default function About() {
+  const router = useRouter();
+
   return (
     <>
       <div className={css.about}>
@@ -127,7 +130,7 @@ export default function About() {
           </Row>
         </Container>
       </div>
-      <AboutInfo />
+      {router.pathname !== '/' && <AboutInfo />}
     </>
   );
 }

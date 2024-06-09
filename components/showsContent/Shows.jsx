@@ -1,32 +1,60 @@
+import { useState, useEffect, Fragment } from "react";
 import { Container, Card, Button } from "react-bootstrap";
-import { shows } from "@/constants";
+import { showsList } from "@/constants";
 import { CustomButton, LoadingGears, Icon } from "@/components";
 import { useAppContext } from "@/context";
 import css from "./shows.module.scss";
 
 export default function Shows() {
+  const [header, setHeader] = useState("Shows!");
+  const [shows, setShows] = useState([]);
   // Get the current date
-  const currentDate = new Date();
   const { darkMode } = useAppContext();
 
-  // Filter the shows to display only upcoming ones
-  const upcomingShows = shows.filter((show) => {
-    // Extract the date part of the show.date
-    const showDate = new Date(
-      show.date.getFullYear(),
-      show.date.getMonth(),
-      show.date.getDate()
-    );
-    // Extract the date part of the current date
-    const currentDateOnly = new Date(
-      currentDate.getFullYear(),
-      currentDate.getMonth(),
-      currentDate.getDate()
-    );
-    // Compare the dates
-    return showDate >= currentDateOnly;
-  });
-  const header = upcomingShows.length > 0 ? "SEE JAM LIVE!" : `Booking soon!`;
+  useEffect(() => {
+    const currentDate = new Date();
+
+    // Filter the shows to display only upcoming ones
+    const upcomingShows = showsList.filter((show) => {
+      // Extract the date part of the show.date
+      const showDate = new Date(
+        show.date.getFullYear(),
+        show.date.getMonth(),
+        show.date.getDate()
+      );
+      // Extract the date part of the current date
+      const currentDateOnly = new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate()
+      );
+      // Compare the dates
+      return showDate >= currentDateOnly;
+    });
+    const displayHeader =
+      upcomingShows.length > 0 ? "Shows!" : `Booking soon!`;
+    setHeader(displayHeader);
+    setShows(upcomingShows);
+  }, []);
+
+  // // Filter the shows to display only upcoming ones
+  // const upcomingShows = showsList.filter((show) => {
+  //   // Extract the date part of the show.date
+  //   const showDate = new Date(
+  //     show.date.getFullYear(),
+  //     show.date.getMonth(),
+  //     show.date.getDate()
+  //   );
+  //   // Extract the date part of the current date
+  //   const currentDateOnly = new Date(
+  //     currentDate.getFullYear(),
+  //     currentDate.getMonth(),
+  //     currentDate.getDate()
+  //   );
+  //   // Compare the dates
+  //   return showDate >= currentDateOnly;
+  // });
+  // const header = upcomingShows.length > 0 ? "SEE JAM LIVE!" : `Booking soon!`;
 
   return (
     <Container fluid="sm" className={`${css.shows} mx-0 px-0 mt-4 mb-auto`}>
@@ -52,56 +80,55 @@ export default function Shows() {
           {header}
         </h2>
         <div className="">
-          {upcomingShows.length > 0 && (
-            <h3 className="px-3 pt-1 mt-3 mb-1 h4 text-uppercase fw-bold">
+          {shows.length > 0 && (
+            <h3 className="px-3 pt-1 mt-3 mb-2 h4 text-uppercase fw-bold">
               Upcoming SHOWS:
             </h3>
           )}
-          <section className="px-3 pt-2 d-flex flex-column align-items-center">
-            {upcomingShows.map((show, index) => (
-              <div
-                key={index}
-                className="col-lg-8 d-flex justify-content-center mb-3"
-              >
-                <Card className="mb-3">
-                  <Card.Img
-                    variant="top"
-                    src={show.flyer}
-                    alt={show.alt}
-                    className="max-height-img"
-                  />
-                  <Card.Body>
-                    <Card.Title className="text-center">
-                      <u className="h3 fw-bold">{show.name}</u>{" "}
-                      {/* Add underlined text */}
-                    </Card.Title>
-                    <Card.Text className="larger-text">
-                      <p>
-                        <strong>Show Date:</strong>{" "}
-                        {show.date.toLocaleDateString()}
-                      </p>
-                      <p>
-                        <strong>Show Time:</strong> {show.time}
-                      </p>
-                      <p>
-                        <strong>Venue:</strong> {show.venue}
-                      </p>
-                      <p>
-                        <strong>Address:</strong> {show.address}
-                      </p>
-                    </Card.Text>
-                  </Card.Body>
-                  <Card.Footer
-                    className={`text-center border-0 pt-0 ${
-                      darkMode ? "bg-black" : "bg-white"
-                    }`}
-                  >
-                    <div className="mb-4 pb-2">
-                      <CustomButton text="More Info" href={show.info} />
-                    </div>
-                  </Card.Footer>
-                </Card>
-              </div>
+          <section className="px-2 pt-3 d-flex flex-column align-items-center">
+            {shows.map((show, index) => (
+              <Fragment key={index}>
+                <div className="col-lg-8 d-flex justify-content-center mb-2">
+                  <Card className="mb-2" style={{ border: "none"}}>
+                    <Card.Img
+                      variant="top"
+                      src={show.flyer}
+                      alt={show.alt}
+                      className="max-height-img"
+                    />
+                    <Card.Body>
+                      <Card.Title className="text-center">
+                        <u className="h3 fw-bold">{show.name}</u>{" "}
+                        {/* Add underlined text */}
+                      </Card.Title>
+                      <Card.Text className="larger-text">
+                        <p>
+                          <strong>Show Date:</strong>{" "}
+                          {show.date.toLocaleDateString()}
+                        </p>
+                        <p>
+                          <strong>Show Time:</strong> {show.time}
+                        </p>
+                        <p>
+                          <strong>Venue:</strong> {show.venue}
+                        </p>
+                        <p>
+                          <strong>Address:</strong> {show.address}
+                        </p>
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer
+                      className={`text-center border-0 pt-0 ${
+                        darkMode ? "bg-black" : "bg-white"
+                      }`}
+                    >
+                      <div className="mb-4 pb-2">
+                        <CustomButton text="More Info" href={show.info} />
+                      </div>
+                    </Card.Footer>
+                  </Card>
+                </div>
+              </Fragment>
             ))}
           </section>
           <h4 className="px-3 pt-1 mt-3 mb-1 h4 text-uppercase fw-bold">

@@ -17,19 +17,12 @@ export default function Support() {
     <>
     <Container className={`my-auto px-0 mx-0 mt-4 ${css.support}`}>
       <Card className="pb-2 pt-4 px-3 position-relative">
-        <CardTitle element="h2">
+      <CardTitle element="h2">
           <Heart />
           THANK YOU
           <Heart />
         </CardTitle>
-        <p className="ml-2 py-2">
-          I am truly passionate about creating live music, and I sincerely
-          appreciate your visit and contribution to my work! Your support and
-          encouragement mean the world to me. Please spread the word with your
-          friends and loved ones about Jam in the Jam Lounge! Thanks
-          again, and I hope to play for you someday soon!
-        </p>
-        <h3 className={css.tips}>{`$$Feelin Tipsy?$$`}</h3>
+        <h3 className={css.tips}>{`Feelin Tipsy?`}</h3>
         <p
           className={css.instructions}
         >{`(Tap an icon below to send a tip! Thank you!)`}</p>
@@ -87,13 +80,18 @@ export default function Support() {
           </Col>
         </Row>
 
-        <div className="pt-2">
-          <CardTitle>
-            <Heart />
-            THANK YOU
-            <Heart />
-          </CardTitle>
-        </div>
+        <CardTitle element="h3">
+          <Heart />
+          THANK YOU
+          <Heart />
+        </CardTitle>
+        <p className="ml-2 pb-2">
+          I am truly passionate about creating live music, and I sincerely
+          appreciate your visit and contribution to my work! Your support and
+          encouragement mean the world to me. Please spread the word with your
+          friends and loved ones about Jam in the Jam Lounge! Thanks
+          again, and I hope to play for you someday soon!
+        </p>
       </Card>
     </Container>
     <br />
