@@ -33,7 +33,7 @@ export default function Contact() {
               <div className="d-flex justify-content-center my-3">
                 <CustomButton
                   text="Book Now!"
-                  href="mailto:jaminthejamlounge@gmail.com"
+                  href="mailto:camjamt@gmail.com"
                 />
               </div>
             </section>
@@ -60,7 +60,7 @@ export default function Contact() {
               <div className="d-flex justify-content-center my-3">
                 <CustomButton
                   text="Book Now!"
-                  href="mailto:jaminthejamlounge@gmail.com"
+                  href="mailto:camjamt@gmail.com"
                 />
               </div>
             </section>
@@ -90,7 +90,7 @@ export default function Contact() {
               <div className="d-flex justify-content-center my-3">
                 <CustomButton
                   text="Book Now!"
-                  href="mailto:jaminthejamlounge@gmail.com"
+                  href="mailto:camjamt@gmail.com"
                 />
               </div>
               <div className="pt-2 mt-4 mb-0">
