@@ -37,7 +37,7 @@ export default function Contact() {
         <div className={css.text}>
           <a
             target="_blank"
-            href="mailto:jaminthejamlounge@gmail.com"
+            href="mailto:camjamt@gmail.com"
             className={css.value}
             rel="noreferrer"
           >

@@ -34,7 +34,7 @@ export default function Support() {
             <p className={css.payer}>CASH APP</p>
 
             <a
-              href="https://cash.app/$toysfromtaiwan"
+              href="https://cash.app/$jamontheweb"
               target="_blank"
               rel="noopener noreferrer"
               className="mb-2"
@@ -55,7 +55,7 @@ export default function Support() {
             <p className={css.payer}>VENMO</p>
 
             <a
-              href="https://account.venmo.com/u/toysfromtaiwan"
+              href="https://account.venmo.com/u/jamontheweb"
               target="_blank"
               rel="noopener noreferrer"
               className={`mb-2 ${css.venmo}`}
