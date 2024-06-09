@@ -18,7 +18,6 @@ export { default as Picture } from "./picture";
 export { default as LoadingGears } from "./loadingGears";
 export { default as MediaLinks } from "./media-links";
 export { default as NavLink } from "./nav-link";
-export { default as Show } from "./show";
 export { default as Stars } from "./stars";
 export { default as TalkBubble } from "./talkBubble";
 export { default as JAM } from "./jam";

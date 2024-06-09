@@ -7,17 +7,6 @@
   margin: 0.5rem auto 0.8rem auto;
 }
 
-/*************************************/
-.shows {
-  overflow: hidden;
-  p {
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
 
 /*************************************/
 .calendars {
@@ -77,4 +66,17 @@
   text-align: center;
   margin-top: 1rem;
   text-decoration: underline;
+}
+
+
+/*************************************/
+.shows {
+  overflow: hidden;
+  p {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
