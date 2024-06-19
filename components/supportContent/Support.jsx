@@ -1,4 +1,4 @@
-import { CardTitle, Icon, Picture } from "@/components";
+import { CardTitle, Icon, Picture, MediaLinks } from "@/components";
 import { useAppContext } from "@/context";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import css from "./support.module.scss";
@@ -15,14 +15,20 @@ export default function Support() {
   const { darkMode } = useAppContext();
   return (
     <>
+     <div className="mt-2">
+     <Picture
+       img="derp.jpeg"
+       alt="cartoon drawing of jam's face"
+       w={500}
+       h={296}
+     />
+   </div>
+   <div className="mt-3 mx-auto">
+        <MediaLinks />
+      </div>
     <Container className={`my-auto px-0 mx-0 mt-4 ${css.support}`}>
       <Card className="pb-2 pt-4 px-3 position-relative">
-      <CardTitle element="h2">
-          <Heart />
-          THANK YOU
-          <Heart />
-        </CardTitle>
-        <h3 className={css.tips}>{`Feelin Tipsy?`}</h3>
+        <h2 className={css.tips}>{`$$Feelin Tipsy?`}</h2>
         <p
           className={css.instructions}
         >{`(Tap an icon below to send a tip! Thank you!)`}</p>
@@ -94,18 +100,6 @@ export default function Support() {
         </p>
       </Card>
     </Container>
-    <br />
-     <div className="mt-1">
-     <Picture
-       img="derp.jpeg"
-       alt="cartoon drawing of jam's face"
-       w={500}
-       h={296}
-     />
-   </div>
-   <p className="display-4 fw-bold mt-3">
-     {`Let's jam out soon!`}
-   </p>
    </>
   );
 }
