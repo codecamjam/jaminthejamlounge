@@ -23,5 +23,6 @@ export { default as TalkBubble } from "./talkBubble";
 export { default as JAM } from "./jam";
 export { default as AboutContent } from "./aboutContent";
 export { default as ContactContent } from "./contactContent";
+export { default as Shows } from "./shows";
 export { default as ShowsContent } from "./showsContent";
 export { default as SupportContent } from "./supportContent";

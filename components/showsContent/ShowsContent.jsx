@@ -1,15 +1,13 @@
-import { useState, useEffect, Fragment } from "react";
-import { Container, Card, Button } from "react-bootstrap";
+import { useState, useEffect} from "react";
+import { Container, Card } from "react-bootstrap";
 import { showsList } from "@/constants";
-import { CustomButton, LoadingGears, Icon } from "@/components";
-import { useAppContext } from "@/context";
+import { Shows, LoadingGears, Icon } from "@/components";
 import css from "./shows.module.scss";
 
-export default function Shows() {
+export default function ShowsContent() {
   const [header, setHeader] = useState("Shows!");
   const [shows, setShows] = useState([]);
   // Get the current date
-  const { darkMode } = useAppContext();
 
   useEffect(() => {
     const currentDate = new Date();
@@ -80,57 +78,7 @@ export default function Shows() {
           {header}
         </h2>
         <div className="">
-          {shows.length > 0 && (
-            <h3 className="px-3 pt-1 mt-3 mb-2 h4 text-uppercase fw-bold">
-              Upcoming SHOWS:
-            </h3>
-          )}
-          <section className="px-2 pt-3 d-flex flex-column align-items-center">
-            {shows.map((show, index) => (
-              <Fragment key={index}>
-                <div className="col-lg-8 d-flex justify-content-center mb-2">
-                  <Card className="mb-2" style={{ border: "none"}}>
-                    <Card.Img
-                      variant="top"
-                      src={show.flyer}
-                      alt={show.alt}
-                      className="max-height-img"
-                    />
-                    <Card.Body>
-                      <Card.Title className="text-center">
-                        <u className="h3 fw-bold">{show.name}</u>{" "}
-                        {/* Add underlined text */}
-                      </Card.Title>
-                      <Card.Text className="larger-text">
-                        <p>
-                          <strong>Show Date:</strong>{" "}
-                          {show.date.toLocaleDateString()}
-                        </p>
-                        <p>
-                          <strong>Show Time:</strong> {show.time}
-                        </p>
-                        <p>
-                          <strong>Venue:</strong> {show.venue}
-                        </p>
-                        <p>
-                          <strong>Address:</strong> {show.address}
-                        </p>
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer
-                      className={`text-center border-0 pt-0 ${
-                        darkMode ? "bg-black" : "bg-white"
-                      }`}
-                    >
-                      <div className="mb-4 pb-2">
-                        <CustomButton text="More Info" href={show.info} />
-                      </div>
-                    </Card.Footer>
-                  </Card>
-                </div>
-              </Fragment>
-            ))}
-          </section>
+          <Shows shows={shows} />
           <h4 className="px-3 pt-1 mt-3 mb-1 h4 text-uppercase fw-bold">
             BE ON THE LOOKOUT:
           </h4>
