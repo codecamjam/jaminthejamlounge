@@ -11,7 +11,7 @@ export default function Contact() {
         <div className={css.text}>
           <a
             target="_blank"
-            href="https://www.linkedin.com/in/cameron-taghlabi-33b69518a/"
+          href="https://linktr.ee/jamontheweb"
             className={css.value}
             rel="noreferrer"
           >
