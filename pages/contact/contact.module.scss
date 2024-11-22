@@ -1,0 +1,114 @@
+@import "../../styles/abstracts/sass-variables";
+
+/****************************************************/
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+/****************************************************/
+.stuff {
+  h3 {
+    font-size: 1.6rem;
+    text-decoration: underline;
+
+    @media only screen and (min-width: $bp-md) {
+      font-size: inherit;
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+
+    @media only screen and (min-width: $bp-md) {
+      font-size: 1.2rem;
+    }
+  }
+
+  ul {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+}
+
+/****************************************************/
+.stuffHeader {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.7rem;
+
+  @media only screen and (min-width: $bp-xs) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    font-size: 2.5rem;
+  }
+}
+
+/****************************************************/
+.icon {
+  svg {
+    display: block;
+    fill: var(--text);
+    margin: 0 auto;
+    width: 12rem;
+    height: 12rem;
+    transform: rotateY(180deg) rotateZ(-45deg);
+
+    @media only screen and (min-width: $bp-xs) {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    @media only screen and (min-width: $bp-md) {
+      width: 13rem;
+      height: 13rem;
+    }
+
+    @media only screen and (min-width: $bp-xl) {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+}
+
+/****************************************************/
+.bringit {
+  font-size: 1.4rem;
+  margin-left: 0.7rem;
+  padding-top: 0.5rem;
+}
+
+/****************************************************/
+.list {
+  font-size: 1.2rem;
+
+  li {
+    font-weight: normal;
+  }
+}
+
+/****************************************************/
+.cardStart {
+  border-right: 1px solid var(--text);
+
+  @media only screen and (min-width: $bp-lg) {
+    border-right: 0px solid transparent !important;
+  }
+}
+
+/****************************************************/
+.cardMiddle {
+  border-left: 1px solid var(--text);
+
+  @media only screen and (min-width: $bp-lg) {
+    border-left: 0px solid transparent !important;
+  }
+}
