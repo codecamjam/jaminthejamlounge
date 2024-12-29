@@ -10,6 +10,7 @@ export default function Footer() {
           title="Twitch"
           target="_blank"
           rel="noreferrer"
+          className={`${css.hide}`}
         >
           <Icon spriteName="icon-twitch" />
         </a>
@@ -18,6 +19,7 @@ export default function Footer() {
           title="Bandcamp"
           target="_blank"
           rel="noreferrer"
+          className={`${css.hide}`}
         >
           <Icon spriteName="icon-bandcamp" />
         </a>

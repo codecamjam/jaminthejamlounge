@@ -140,7 +140,7 @@ export default function Shows() {
   upcoming shows. I am passionate about live instrumental music and
   I'm eager to perform in venues where original music is truly
   appreciated. Please check back soon! I will be starting my live
-  performances this Fall. While I'll primarily be performing locally
+  performances in 2025.  While I'll primarily be performing locally
   in Jacksonville and St. Augustine, please don't hesitate to reach
   out if you'd like me to visit your town and play for you! Thank
   you once again for stopping by, and keep an eye out for updates on

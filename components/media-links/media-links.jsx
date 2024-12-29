@@ -5,7 +5,7 @@ export default function MediaLinks() {
   return (
     <div className={css.logos}>
       <a
-        className={css.link}
+        className={`${css.link} ${css.hide}`}
         href="https://www.twitch.tv/jaminthejamlounge"
         title="Twitch"
         target="_blank"
@@ -13,15 +13,17 @@ export default function MediaLinks() {
       >
         <Icon spriteName="icon-twitch" />
       </a>
+
       <a
         className={css.link}
-        href="https://jaminthejamlounge.bandcamp.com/"
-        title="Bandcamp"
+        href="https://www.tiktok.com/@jaminthejamlounge"
+        title="TikTok"
         target="_blank"
         rel="noreferrer"
       >
-        <Icon spriteName="icon-bandcamp" />
+        <Icon spriteName="icon-tiktok" />
       </a>
+   
       <a
         className={css.link}
         href="https://www.youtube.com/@jaminthejamlounge"
@@ -42,13 +44,13 @@ export default function MediaLinks() {
       </a>
 
       <a
-        className={css.link}
-        href="https://www.tiktok.com/@jaminthejamlounge"
-        title="TikTok"
+        className={`${css.link} ${css.hide}`}
+        href="https://jaminthejamlounge.bandcamp.com/"
+        title="Bandcamp"
         target="_blank"
         rel="noreferrer"
       >
-        <Icon spriteName="icon-tiktok" />
+        <Icon spriteName="icon-bandcamp" />
       </a>
     </div>
   );
