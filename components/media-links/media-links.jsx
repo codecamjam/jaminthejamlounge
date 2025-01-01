@@ -4,7 +4,7 @@ import css from "./media-links.module.scss";
 export default function MediaLinks() {
   return (
     <div className={css.logos}>
-      <a
+      {/* <a
         className={`${css.link} ${css.hide}`}
         href="https://www.twitch.tv/jaminthejamlounge"
         title="Twitch"
@@ -12,17 +12,17 @@ export default function MediaLinks() {
         rel="noreferrer"
       >
         <Icon spriteName="icon-twitch" />
-      </a>
-
-      <a
+      </a> */}
+        <a
         className={css.link}
-        href="https://www.tiktok.com/@jaminthejamlounge"
-        title="TikTok"
+        href="https://www.instagram.com/jaminthejamlounge/"
+        title="Instagram"
         target="_blank"
         rel="noreferrer"
       >
-        <Icon spriteName="icon-tiktok" />
+        <Icon spriteName="icon-instagram" />
       </a>
+
    
       <a
         className={css.link}
@@ -33,17 +33,18 @@ export default function MediaLinks() {
       >
         <Icon spriteName="icon-youtube" />
       </a>
+    
       <a
         className={css.link}
-        href="https://www.instagram.com/jaminthejamlounge/"
-        title="Instagram"
+        href="https://www.tiktok.com/@jaminthejamlounge"
+        title="TikTok"
         target="_blank"
         rel="noreferrer"
       >
-        <Icon spriteName="icon-instagram" />
+        <Icon spriteName="icon-tiktok" />
       </a>
 
-      <a
+      {/* <a
         className={`${css.link} ${css.hide}`}
         href="https://jaminthejamlounge.bandcamp.com/"
         title="Bandcamp"
@@ -51,7 +52,7 @@ export default function MediaLinks() {
         rel="noreferrer"
       >
         <Icon spriteName="icon-bandcamp" />
-      </a>
+      </a> */}
     </div>
   );
 }

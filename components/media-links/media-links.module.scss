@@ -56,19 +56,25 @@
   justify-content: space-between;
   align-items: flex-start;
   transform: translateY(-0.25rem);
-  width: 18rem;
+  // width: 18rem;
+  width: 10rem;
+
+
   @media only screen and (min-width: $bp-md) {
-    width: 20rem;
+    // width: 20rem;
+    width: 12rem;
     margin: 0.5rem 0 0 0;
   }
 
   @media only screen and (min-width: $bp-lg) {
-    width: 25rem;
+    // width: 25rem;
+    width: 15rem;
     margin: 0.5rem 0 0 0;
   }
 
-  @media only screen and (min-width: $bp-lg) {
-    width: 30rem;
+  @media only screen and (min-width: $bp-xl) {
+    // width: 30rem;
+    width: 16rem;
     margin: 0.5rem 0 0 0;
   }
 }

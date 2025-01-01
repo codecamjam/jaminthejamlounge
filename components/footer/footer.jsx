@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={css.footer}>
       <div className={css.logos}>
-        <a
+        {/* <a
           href="https://www.twitch.tv/jaminthejamlounge"
           title="Twitch"
           target="_blank"
@@ -22,6 +22,14 @@ export default function Footer() {
           className={`${css.hide}`}
         >
           <Icon spriteName="icon-bandcamp" />
+        </a> */}
+        <a
+          href="https://www.instagram.com/jaminthejamlounge/"
+          title="Instagram"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon spriteName="icon-instagram" />
         </a>
         <a
           href="https://www.youtube.com/@jaminthejamlounge"
@@ -31,15 +39,6 @@ export default function Footer() {
         >
           <Icon spriteName="icon-youtube2" />
         </a>
-        <a
-          href="https://www.instagram.com/jaminthejamlounge/"
-          title="Instagram"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon spriteName="icon-instagram" />
-        </a>
-
         <a
           href="https://www.tiktok.com/@jaminthejamlounge"
           title="TikTok"
