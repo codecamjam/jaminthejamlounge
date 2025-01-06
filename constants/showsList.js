@@ -22,4 +22,14 @@ export const showsList = [
     info: "https://www.facebook.com/graetgoods",
     alt: "Jam at Graet Goods for West King Wednesday",
   },
+  {
+    date: utcToZonedTime(parseISO("2025-02-23T00:00:00"), "America/New_York"),
+    time: "6:00PM - 9:00PM",
+    name: "Jam at BrewHound!",
+    venue: "BrewHound Dog Park + Bar",
+    address: "1848 Kings Cir S, Neptune Beach, FL 32266",
+    flyer: "/images/shows/brewhound.avif",
+    info: "https://www.brew-hound.com/",
+    alt: "BrewHound Dog Park + Bar",
+  },
 ];

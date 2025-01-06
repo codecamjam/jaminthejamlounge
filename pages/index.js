@@ -24,8 +24,8 @@ export default function HomePage() {
       <div className="my-4 mx-auto">
         <MediaLinks />
       </div>
-      <AboutContent />
       <ShowsContent />
+      <AboutContent />
     </>
   );
 }
