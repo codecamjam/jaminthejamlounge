@@ -94,7 +94,8 @@ export default function Shows() {
                       variant="top"
                       src={show.flyer}
                       alt={show.alt}
-                      className="max-height-img"
+                      className="max-height-img bg-white"
+                      style={{backgroundColor: 'white', borderRadius: '50%'}}
                     />
                     <Card.Body>
                       <Card.Title className="text-center">
