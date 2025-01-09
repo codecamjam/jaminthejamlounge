@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from "react";
-import { Container, Card, Button } from "react-bootstrap";
+import { Container, Card, Button, Col, Row } from "react-bootstrap";
 import { showsList } from "@/constants";
 import { CustomButton, LoadingGears, Icon } from "@/components";
 import { useAppContext } from "@/context";
@@ -88,48 +88,57 @@ export default function Shows() {
           <section className="px-2 pt-3 d-flex flex-column align-items-center">
             {shows.map((show, index) => (
               <Fragment key={index}>
-                <div className="col-lg-8 d-flex justify-content-center mb-2">
-                  <Card className="mb-2" style={{ border: "none"}}>
-                    <Card.Img
-                      variant="top"
-                      src={show.flyer}
-                      alt={show.alt}
-                      className="max-height-img bg-white"
-                      style={{backgroundColor: 'white', borderRadius: '50%'}}
-                    />
-                    <Card.Body>
-                      <Card.Title className="text-center">
-                        <u className="h3 fw-bold">{show.name}</u>{" "}
-                        {/* Add underlined text */}
-                      </Card.Title>
-                      <Card.Text className="larger-text">
-                        <p>
-                          <strong>Show Date:</strong>{" "}
-                          {show.date.toLocaleDateString()}
-                        </p>
-                        <p>
-                          <strong>Show Time:</strong> {show.time}
-                        </p>
-                        <p>
-                          <strong>Venue:</strong> {show.venue}
-                        </p>
-                        <p>
-                          <strong>Address:</strong> {show.address}
-                        </p>
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer
-                      className={`text-center border-0 pt-0 ${
-                        darkMode ? "bg-black" : "bg-white"
-                      }`}
-                    >
-                      <div className="mb-4 pb-2">
-                        <CustomButton text="More Info" href={show.info} />
-                      </div>
-                    </Card.Footer>
-                  </Card>
-                </div>
-              </Fragment>
+              <div className="col-12 d-flex justify-content-center mb-2">
+                <Card className="mb-2" style={{ border: "none" }}>
+                  <Row className="g-2 align-items-center">
+                    {/* Image Column */}
+                    <Col lg={4} className="">
+                     <div className="ml-2 d-flex justify-content-center align-items-center">
+ <Card.Img
+                        variant="top"
+                        src={show.flyer}
+                        alt={show.alt}
+                        className="max-height-img"
+                        style={{ backgroundColor: show.bgColor, borderRadius: "50%", }}
+                      />
+                     </div>
+                    </Col>
+            
+                    {/* Content Column */}
+                    <Col lg={8}>
+                      <Card.Body className="mx-xl-4">
+                        <Card.Title className="text-center">
+                          <u className="h3 fw-bold">{show.name}</u>
+                        </Card.Title>
+                        <Card.Text className="larger-text">
+                          <p>
+                            <strong>Show Date:</strong> {show.date.toLocaleDateString()}
+                          </p>
+                          <p>
+                            <strong>Show Time:</strong> {show.time}
+                          </p>
+                          <p>
+                            <strong>Venue:</strong> {show.venue}
+                          </p>
+                          <p>
+                            <strong>Address:</strong> {show.address}
+                          </p>
+                        </Card.Text>
+                      </Card.Body>
+                      <Card.Footer
+                        className={`text-center border-0 pt-0 ${
+                          darkMode ? "bg-black" : "bg-white"
+                        }`}
+                      >
+                        <div className="mb-4 pb-2">
+                          <CustomButton text="More Info" href={show.info} />
+                        </div>
+                      </Card.Footer>
+                    </Col>
+                  </Row>
+                </Card>
+              </div>
+            </Fragment>
             ))}
           </section>
           <h4 className="px-3 pt-1 mt-3 mb-1 h4 text-uppercase fw-bold">
