@@ -25,7 +25,6 @@ export default function HomePage() {
         <MediaLinks />
       </div>
       <ShowsContent />
-      <AboutContent />
     </>
   );
 }
