@@ -38,25 +38,6 @@ export default function Shows() {
     setShows(upcomingShows);
   }, []);
 
-  // // Filter the shows to display only upcoming ones
-  // const upcomingShows = showsList.filter((show) => {
-  //   // Extract the date part of the show.date
-  //   const showDate = new Date(
-  //     show.date.getFullYear(),
-  //     show.date.getMonth(),
-  //     show.date.getDate()
-  //   );
-  //   // Extract the date part of the current date
-  //   const currentDateOnly = new Date(
-  //     currentDate.getFullYear(),
-  //     currentDate.getMonth(),
-  //     currentDate.getDate()
-  //   );
-  //   // Compare the dates
-  //   return showDate >= currentDateOnly;
-  // });
-  // const header = upcomingShows.length > 0 ? "SEE JAM LIVE!" : `Booking soon!`;
-
   return (
     <Container fluid="sm" className={`${css.shows} mx-0 px-0 mt-4 mb-auto`}>
       <Card className="position-relative">
@@ -93,7 +74,7 @@ export default function Shows() {
                   <Card className="mb-2" style={{ border: "none" }}>
                     <Row className="g-2 align-items-center">
                       {/* Image Column */}
-                      <Col lg={4} className="">
+                      <Col lg={5} className="">
                         <div className="ml-2 d-flex justify-content-center align-items-center">
                           <Card.Img
                             variant="top"
@@ -101,15 +82,15 @@ export default function Shows() {
                             alt={show.alt}
                             className="max-height-img"
                             style={{ backgroundColor: show.bgColor, borderRadius: "50%", 
-                              filter: index % 2 === 0 ? "none" : "invert(100%)",
-                              border: index % 2 === 0 ? '1px solid black' : '1px solid white'
+                              border: '1px solid black', 
+                              filter: show.invert ?  "invert(100%)" : 'none'
                              }}
                           />
                         </div>
                       </Col>
 
                       {/* Content Column */}
-                      <Col lg={8}>
+                      <Col lg={7}>
                         <Card.Body className="mx-xl-4">
                           <Card.Title className="text-center">
                             <u className="h3 fw-bold">{show.name}</u>
