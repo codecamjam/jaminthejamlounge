@@ -41,10 +41,10 @@ export const showsList = [
     flyer: "/images/shows/kava.png",
     info: "https://www.kavaandcompany.com/",
     alt: "Kava & Company - San Marco",
-    invert: true
+    invert: true,
   },
   {
-    date: utcToZonedTime(parseISO("2025-03-08T00:00:00"), "America/New_York"),
+    date: utcToZonedTime(parseISO("2025-03-07T00:00:00"), "America/New_York"),
     time: "10PM - 12:00AM",
     name: "Jam at Kava & Company!",
     venue: "Kava & Company - San Marco",
