@@ -53,4 +53,14 @@ export const showsList = [
     info: "https://www.kavaandcompany.com/",
     alt: "Kava & Company - San Marco",
   },
+  {
+    date: utcToZonedTime(parseISO("2025-04-04T00:00:00"), "America/New_York"),
+    time: "7PM - 9PM",
+    name: "Jam at Back Bar",
+    venue: "Back Bar at Be-In",
+    address: "20 Seminole Road, Atlantic Beach, FL",
+    flyer: "/images/jam-face.jpg",
+    alt: "Back Bar at Be-In",
+    info: "https://www.instagram.com/thebackbar__/",
+  },
 ];
