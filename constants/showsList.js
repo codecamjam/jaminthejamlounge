@@ -23,7 +23,7 @@ export const showsList = [
     alt: "Cummer Museum of Art & Gardens",
   },
   {
-    date: utcToZonedTime(parseISO("2025-01-17T00:00:00"), "America/New_York"),
+    date: utcToZonedTime(parseISO("2025-01-31T00:00:00"), "America/New_York"),
     time: "8:00PM - 11:00PM",
     name: "Jam at Bedlam!",
     venue: "Bedlam Live in Mayport",
