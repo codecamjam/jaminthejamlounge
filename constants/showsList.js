@@ -95,4 +95,14 @@ export const showsList = [
     alt: "Back Bar at Be-In",
     info: "https://www.instagram.com/thebackbar__/",
   },
+  {
+    date: utcToZonedTime(parseISO("2025-03-14T00:00:00"), "America/New_York"),
+    time: "7PM - 10PM",
+    name: "Jam at Bold City!",
+    venue: "Bold City Brewery",
+    address: "2670 Rosselle St #7, Jacksonville, FL 32204",
+    flyer: "/images/shows/bc.jpeg",
+    alt: "Bold City Brewery",
+    info: "https://boldcitybrewery.com/",
+  },
 ];
